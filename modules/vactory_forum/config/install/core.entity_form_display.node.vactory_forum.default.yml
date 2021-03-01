@@ -1,0 +1,190 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.vactory_forum.body
+    - field.field.node.vactory_forum.comment
+    - field.field.node.vactory_forum.field_forum_editeur
+    - field.field.node.vactory_forum.field_forum_expert
+    - field.field.node.vactory_forum.field_forum_icone
+    - field.field.node.vactory_forum.field_forum_status
+    - field.field.node.vactory_forum.field_forum_views_count
+    - field.field.node.vactory_forum.field_vactory_date
+    - field.field.node.vactory_forum.field_vactory_excerpt
+    - field.field.node.vactory_forum.field_vactory_media_document
+    - field.field.node.vactory_forum.field_vactory_meta_tags
+    - field.field.node.vactory_forum.field_vactory_taxonomy_1
+    - node.type.vactory_forum
+  module:
+    - comment
+    - datetime
+    - metatag
+    - path
+    - scheduler
+    - text
+id: node.vactory_forum.default
+targetEntityType: node
+bundle: vactory_forum
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 15
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_forum_editeur:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_forum_expert:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_forum_status:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vactory_date:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_vactory_excerpt:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vactory_meta_tags:
+    weight: 22
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_vactory_taxonomy_1:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  node_banner:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  vcc:
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    weight: 13
+    third_party_settings: {  }
+hidden:
+  field_forum_icone: true
+  field_forum_views_count: true
+  field_vactory_media_document: true
